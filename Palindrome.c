@@ -25,10 +25,15 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 */
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
+
 bool isPalindrome(int num);
+bool isPalindromeStr(int num);
 int main()
 {
-    printf("%d\n", isPalindrome(110));
+    int num = 12121;
+    printf("%d\n", isPalindrome(num));
+    printf("%d\n", isPalindromeStr(num));
     return 0;
 }
 bool isPalindrome(int num)
@@ -42,6 +47,24 @@ bool isPalindrome(int num)
         num = num/10;
     }
     if (rev == orig_num)
-        return 1;
-    return 0;
+        return true;
+    return false;
+}
+
+bool isPalindromeStr(int num)
+{
+    char num_str[12];
+    sprintf(num_str, "%d", num);
+    int left = 0, right = (strlen(num_str) - 1);
+
+    while (left < right)
+    {
+        if (num_str[left] != num_str[right])
+        {
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
 }
