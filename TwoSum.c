@@ -21,19 +21,15 @@ Output: [0,1]
 */
 #include <stdio.h>
 
-int* twoSum(int nums[], int numsSize, int target, int resarr[]){
-    for (int i=0; i<numsSize; i++)
-    {
-        for (int j=i; j<numsSize; j++)
-        {
-            if ((nums[i] + nums[j]) == target)
-            {
+int* twoSum(int nums[], int nums_size, int target, int resarr[]){
+    for (int i=0; i < nums_size-1; i++)
+        for (int j=i+1; j < nums_size; j++)
+            if ((nums[i] + nums[j]) == target) {
                 resarr[0] = i;
                 resarr[1] = j;
             }
-        }
-    }
-    return 0;
+    
+    return resarr;
 }
 
 int main()
