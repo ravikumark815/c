@@ -141,6 +141,15 @@ void checkKthBit(int num, int k)
     return;
 }
 
+void toggleKthBit(int num, int k)
+{
+    printf(">> Toggle Kth Bit: \n");
+    decimalToBinary(num);
+    num = num ^ (1<<k);
+    decimalToBinary(num);
+    return;
+}
+
 void main()
 {
     int num = 156;
@@ -162,6 +171,7 @@ void main()
     setKthBit(156, 5);
     unsetKthBit(188, 5);
     checkKthBit(189, 5);
+    toggleKthBit(156, 5);
 
     return;
 }
