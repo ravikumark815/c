@@ -114,6 +114,23 @@ void powOf2(int num)
     return;
 }
 
+void setKthBit(int num, int k)
+{
+    printf(">> Set Kth Bit: \n");
+    decimalToBinary(num);
+    num = num | (1<<k);
+    decimalToBinary(num);
+    return;
+}
+
+void unsetKthBit(int num, int k)
+{
+    printf(">> Unset Kth Bit: \n");
+    decimalToBinary(num);
+    num = num & ~(1<<k);
+    decimalToBinary(num);
+    return;
+}
 
 void main()
 {
@@ -133,7 +150,8 @@ void main()
     powOf2(0);
     powOf2(156);
     powOf2(65536);
-
+    setKthBit(156, 5);
+    unsetKthBit(188, 5);
 
     return;
 }
