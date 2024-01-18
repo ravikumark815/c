@@ -49,6 +49,17 @@ void oddEven(int num)
     return;
 }
 
+void divideby2(int num)
+{
+    printf(">> Divide by two[%d]: %d\n", num, num>>1);
+    return;
+}
+void multiplyby2(int num)
+{
+    printf(">> Multiply by two[%d]: %d\n", num, num<<1);
+    return;
+}
+
 // Function to clear the lowest set bit
 void clearLowestSetBit(int num)
 {
@@ -88,6 +99,8 @@ void main()
     oddEven(2367);
     clearLowestSetBit(156);
     lowestSetBit(12);
+    divideby2(16384);
+    multiplyby2(8192);
 
     return;
 }
