@@ -60,6 +60,17 @@ void multiplyby2(int num)
     return;
 }
 
+void lowerCase(char ch)
+{
+    printf(">> lowerCase(%c): %c\n", ch, ch | 32);
+    return;
+}
+void upperCase(char ch)
+{
+    printf(">> upperCase(%c): %c\n", ch, ch & ~32);
+    return;
+}
+
 // Function to clear the lowest set bit
 void clearLowestSetBit(int num)
 {
@@ -101,6 +112,8 @@ void main()
     lowestSetBit(12);
     divideby2(16384);
     multiplyby2(8192);
+    lowerCase('A');
+    upperCase('b');
 
     return;
 }
