@@ -98,6 +98,22 @@ void lowestSetBit(int num)
     return;
 }
 
+void powOf2(int num)
+{
+    // if num = 0
+    if (!num) {
+        return;
+    }
+
+    if (num & (num-1)) {
+        printf(">> %d: Not a power of 2\n", num);
+        return;
+    }
+
+    printf(">> %d: Power of 2\n", num);
+    return;
+}
+
 
 void main()
 {
@@ -114,6 +130,10 @@ void main()
     multiplyby2(8192);
     lowerCase('A');
     upperCase('b');
+    powOf2(0);
+    powOf2(156);
+    powOf2(65536);
+
 
     return;
 }
