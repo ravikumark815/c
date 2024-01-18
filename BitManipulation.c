@@ -43,8 +43,8 @@ void binaryToDecimal(long long num) {
 // Function to check number is odd or even
 void oddEven(int num)
 {
-    if (num & 1) printf("\nOdd Number: %d\n", num);
-    else printf("\nEven Number: %d\n", num);
+    if (num & 1) printf(">> Odd Number: %d\n", num);
+    else printf(">> Even Number: %d\n", num);
     
     return;
 }
@@ -53,7 +53,7 @@ void oddEven(int num)
 void clearLowestSetBit(int num)
 {
     int res = num & (num - 1);
-    printf("\nclearLowestSetBit:\n");
+    printf(">> clearLowestSetBit:\n");
     printf("Before -");
     decimalToBinary(num);
     printf("After  -");
@@ -61,6 +61,21 @@ void clearLowestSetBit(int num)
     
     return;
 }
+
+// Function to extract lowest set bit
+void lowestSetBit(int num)
+{
+    int res = num & (~(num-1));
+    printf(">> lowestSetBit:\n");
+
+    printf("Original: %d ", num);
+    decimalToBinary(num);
+    printf("Lowest Set Bit Cleared: %d ", res);
+    decimalToBinary(res);
+
+    return;
+}
+
 
 void main()
 {
@@ -72,6 +87,7 @@ void main()
     oddEven(16384);
     oddEven(2367);
     clearLowestSetBit(156);
+    lowestSetBit(12);
 
     return;
 }
