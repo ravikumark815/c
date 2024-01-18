@@ -1,3 +1,10 @@
+/*
+Author: https://github.com/ravikumark815
+
+------- Strings -------
+Common string functions in C and their implementations
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
