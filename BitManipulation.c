@@ -132,6 +132,15 @@ void unsetKthBit(int num, int k)
     return;
 }
 
+void checkKthBit(int num, int k)
+{
+    printf(">> Check Kth Bit: \n");
+    decimalToBinary(num);
+    if (num & (1<<k)) printf("%d bit is Set\n", k);
+    else printf("%d bit is Not set\n", k);
+    return;
+}
+
 void main()
 {
     int num = 156;
@@ -152,6 +161,7 @@ void main()
     powOf2(65536);
     setKthBit(156, 5);
     unsetKthBit(188, 5);
+    checkKthBit(189, 5);
 
     return;
 }
