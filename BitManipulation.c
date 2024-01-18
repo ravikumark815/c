@@ -70,7 +70,7 @@ void lowestSetBit(int num)
 
     printf("Original: %d ", num);
     decimalToBinary(num);
-    printf("Lowest Set Bit Cleared: %d ", res);
+    printf("Lowest Set Bit: %d ", res);
     decimalToBinary(res);
 
     return;
