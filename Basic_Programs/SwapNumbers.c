@@ -25,7 +25,7 @@ int main()
 
     swap(&a, &b);
 
-    printf("After Swapping: a: %d, b: %d\n", a , b);
+    printf("After Swapping:\na: %d, b: %d\n", a , b);
     
     return 0;
 }
